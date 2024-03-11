@@ -7,7 +7,12 @@ use walkdir::WalkDir;
 #[command(version = "1.0", about = "Launch Neovide with selected directory from a fuzzy find", long_about = None)]
 struct Args {
     /// Directories to search in for fuzzy finding
-    #[arg(short, long, value_name = "DIRECTORY")]
+    #[arg(
+        short,
+        long,
+        value_name = "DIRECTORY",
+        help = "Directories to search in for fuzzy finding"
+    )]
     directories: Vec<String>,
 }
 
